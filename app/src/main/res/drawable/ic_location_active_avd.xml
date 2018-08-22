@@ -1,0 +1,100 @@
+<animated-vector xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    tools:targetApi="lollipop">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:name="vector"
+            android:width="24dp"
+            android:height="24dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+            <group android:name="locations">
+                <path
+                    android:name="pin"
+                    android:pathData="M 11.792 1.5 C 7.76 1.5 4.5 4.76 4.5 8.792 C 4.5 14.26 11.792 22.333 11.792 22.333 C 11.792 22.333 19.083 14.26 19.083 8.792 C 19.083 4.76 15.823 1.5 11.792 1.5 Z M 6.443 8.723 C 6.443 5.771 8.839 3.375 11.792 3.375 C 14.744 3.375 17.14 5.771 17.14 8.723 C 17.14 11.804 14.059 16.414 11.792 19.292 C 9.567 16.436 6.443 11.772 6.443 8.723 Z"
+                    android:fillColor="#4a4a4a"
+                    android:strokeWidth="1"/>
+                <group android:name="animate">
+                    <path
+                        android:name="circle"
+                        android:pathData="M 11.792 6.188 C 11.241 6.186 10.703 6.359 10.257 6.682 C 9.81 7.005 9.478 7.461 9.307 7.985 C 9.137 8.509 9.137 9.074 9.307 9.598 C 9.478 10.122 9.81 10.578 10.257 10.901 C 10.703 11.224 11.241 11.398 11.792 11.396 C 12.482 11.396 13.145 11.121 13.633 10.633 C 14.121 10.145 14.396 9.482 14.396 8.792 C 14.396 8.101 14.121 7.438 13.633 6.95 C 13.145 6.462 12.482 6.188 11.792 6.188 Z"
+                        android:fillColor="#4a4a4a"
+                        android:strokeWidth="1"/>
+                </group>
+            </group>
+        </vector>
+    </aapt:attr>
+    <target android:name="animate">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="scaleX"
+                    android:duration="400"
+                    android:valueFrom="1"
+                    android:valueTo="1.5"
+                    android:valueType="floatType"
+                    android:interpolator="@android:interpolator/linear_out_slow_in"/>
+                <objectAnimator
+                    android:propertyName="scaleY"
+                    android:duration="400"
+                    android:valueFrom="1"
+                    android:valueTo="1.5"
+                    android:valueType="floatType"
+                    android:interpolator="@android:interpolator/linear_out_slow_in"/>
+                <objectAnimator
+                    android:propertyName="pivotX"
+                    android:duration="800"
+                    android:valueFrom="12"
+                    android:valueTo="12"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/bounce_interpolator"/>
+                <objectAnimator
+                    android:propertyName="pivotY"
+                    android:duration="800"
+                    android:valueFrom="8.8"
+                    android:valueTo="8.8"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/bounce_interpolator"/>
+                <objectAnimator
+                    android:propertyName="scaleX"
+                    android:startOffset="400"
+                    android:duration="400"
+                    android:valueFrom="1.5"
+                    android:valueTo="1"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/bounce_interpolator"/>
+                <objectAnimator
+                    android:propertyName="scaleY"
+                    android:startOffset="400"
+                    android:duration="400"
+                    android:valueFrom="1.5"
+                    android:valueTo="1"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/bounce_interpolator"/>
+            </set>
+        </aapt:attr>
+    </target>
+    <target android:name="circle">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="fillColor"
+                android:duration="800"
+                android:valueFrom="#4a4a4a"
+                android:valueTo="#3db7e4"
+                android:valueType="colorType"
+                android:interpolator="@android:interpolator/fast_out_slow_in"/>
+        </aapt:attr>
+    </target>
+    <target android:name="pin">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="fillColor"
+                android:duration="800"
+                android:valueFrom="#4a4a4a"
+                android:valueTo="#490e6f"
+                android:valueType="colorType"
+                android:interpolator="@android:interpolator/fast_out_slow_in"/>
+        </aapt:attr>
+    </target>
+</animated-vector>

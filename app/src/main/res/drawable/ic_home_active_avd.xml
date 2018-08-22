@@ -1,0 +1,60 @@
+<animated-vector xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    tools:targetApi="lollipop">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:name="vector"
+            android:width="24dp"
+            android:height="24dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+            <path
+                android:name="homeframe"
+                android:pathData="M 16.94 22 L 16.94 20.39 L 19 20.39 L 19 10.535 L 12 4.857 L 5 10.535 L 5 20.39 L 7.256 20.39 L 7.256 22 L 3 22 L 3 9.419 L 12 2 L 21 9.419 L 21 22 L 16.94 22 Z"
+                android:fillColor="#4a4a4a"
+                android:strokeWidth="1"/>
+            <path
+                android:name="doorclosed"
+                android:pathData="M 9 13 L 15 13 L 15 22 L 9 22 Z"
+                android:fillColor="#4a4a4a"
+                android:strokeWidth="1"/>
+            <path
+                android:name="animatedoor"
+                android:pathData="M 9 13 L 9 22 Z"
+                android:fillColor="#4a4a4a"
+                android:strokeWidth="1"/>
+        </vector>
+    </aapt:attr>
+    <target android:name="animatedoor">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="pathData"
+                    android:duration="800"
+                    android:valueFrom="M 9 13 L 9 22 L 9 19 L 9 16 L 9 13"
+                    android:valueTo="M 9 13 L 9 22 L 15 22 L 15 13 L 9 13"
+                    android:valueType="pathType"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+                <objectAnimator
+                    android:propertyName="fillColor"
+                    android:duration="800"
+                    android:valueFrom="#4a4a4a"
+                    android:valueTo="#3db7e4"
+                    android:valueType="colorType"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+            </set>
+        </aapt:attr>
+    </target>
+    <target android:name="homeframe">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="fillColor"
+                android:duration="800"
+                android:valueFrom="#4a4a4a"
+                android:valueTo="#490e6f"
+                android:valueType="colorType"
+                android:interpolator="@android:interpolator/fast_out_slow_in"/>
+        </aapt:attr>
+    </target>
+</animated-vector>

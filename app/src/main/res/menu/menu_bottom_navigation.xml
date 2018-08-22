@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/item_home_fragment"
+        android:icon="@drawable/anim_home_drawable"
+        android:title="@string/home"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/item_appointments_fragment"
+        android:icon="@drawable/anim_appointments_drawable"
+        android:title="@string/appointments"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/item_locations_fragment"
+        android:icon="@drawable/anim_locations_drawable"
+        android:title="@string/location"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/item_settings_fragment"
+        android:icon="@drawable/anim_settings_drawable"
+        android:title="@string/settings"
+        app:showAsAction="ifRoom" />
+</menu>

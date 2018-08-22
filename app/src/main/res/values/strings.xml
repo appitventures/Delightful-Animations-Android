@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Delightful Animations</string>
+
+    <string name="appointments">Appointments</string>
+    <string name="home">Home</string>
+    <string name="location">Locations</string>
+    <string name="settings">Settings</string>
+
+
+    <string name="home_fragment">HomeFragment</string>
+    <string name="appointments_fragment">AppointmentsFragment</string>
+    <string name="location_fragment">LocationsFragment</string>
+    <string name="settings_fragment">SettingsFragment</string>
+
+</resources>
