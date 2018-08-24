@@ -5,8 +5,8 @@
         android:id="@+id/item_home_fragment"
         android:icon="@drawable/anim_home_drawable"
         android:title="@string/home"
-        app:showAsAction="ifRoom" />
-
+        app:showAsAction="ifRoom"
+/>
     <item
         android:id="@+id/item_appointments_fragment"
         android:icon="@drawable/anim_appointments_drawable"

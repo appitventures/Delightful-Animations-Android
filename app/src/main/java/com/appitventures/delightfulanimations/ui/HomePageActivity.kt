@@ -1,18 +1,22 @@
 package com.appitventures.delightfulanimations
 
 import android.annotation.SuppressLint
+import android.annotation.TargetApi
+import android.graphics.drawable.*
 import android.os.Build
 import android.os.Bundle
-import android.os.Handler
 import android.support.annotation.RequiresApi
 import android.support.design.internal.BottomNavigationItemView
 import android.support.design.internal.BottomNavigationMenuView
 import android.support.design.widget.BottomNavigationView
+import android.support.graphics.drawable.AnimatedVectorDrawableCompat
 import android.support.v4.app.Fragment
 import android.support.v4.content.ContextCompat
 import android.view.MenuItem
 import android.util.Log
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.content.res.AppCompatResources
+import android.view.View
 import kotlinx.android.synthetic.main.activity_home_page.*
 
 
@@ -25,28 +29,21 @@ class HomePageActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home_page)
         initialiseBottomNavigationClickListener()
         initialiseDefaultFragment()
-       Handler().postDelayed(Runnable {
-           bottomNavigationDashboardId.menu.getItem(0).setChecked(true)
-       },2000)
     }
 
-    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     private fun initialiseDefaultFragment() {
-        //  addFragment(HomeFragment.newInstance())
         bottomNavigationDashboardId.selectedItemId = R.id.item_home_fragment
 
     }
 
-    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     private fun initialiseBottomNavigationClickListener() {
         bottomNavigationDashboardId.itemIconTintList = null
-        bottomNavigationDashboardId.setOnNavigationItemSelectedListener { item: MenuItem ->
+        bottomNavigationDashboardId.setOnNavigationItemSelectedListener {
+            item: MenuItem ->
             addFragmentBasedOnId(item.itemId)
             true
-
         }
-        disableShiftMode(bottomNavigationDashboardId)
-
+         disableShiftMode(bottomNavigationDashboardId)
     }
 
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
@@ -56,10 +53,9 @@ class HomePageActivity : AppCompatActivity() {
                 .replace(R.id.fragmentDashboardContentId, fragment, fragment.javaClass.simpleName)
                 .commit()
 
-
     }
 
-    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private fun addFragmentBasedOnId(itemId: Int) {
         selectedItemId = itemId
         when (itemId) {
@@ -88,8 +84,6 @@ class HomePageActivity : AppCompatActivity() {
                 if (currentFragment == null)
                     addFragment(HomeFragment.newInstance())
             }
-
-
         }
 
     }
@@ -116,7 +110,6 @@ class HomePageActivity : AppCompatActivity() {
         } catch (e: IllegalAccessException) {
             Log.e("BNVHelper", "Unable to change value of shift mode", e)
         }
-
     }
 
 }

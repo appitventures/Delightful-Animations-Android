@@ -4,7 +4,7 @@
     tools:targetApi="lollipop">
     <!-- provide a different drawable for each state-->
     <item android:id="@+id/state_on"
-        android:drawable="@drawable/ic_location_active_avd"
+        android:drawable="@drawable/ic_location_active"
         android:state_checked="true"/>
     <item android:id="@+id/state_off"
         android:drawable="@drawable/ic_locations_inactive"/>
